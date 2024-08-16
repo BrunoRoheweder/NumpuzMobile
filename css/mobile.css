@@ -1,0 +1,172 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos base */
+html {
+    background-color: black;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+:root {
+    --background-color-trans: transparent;
+    --background-color-white: white;
+    --background-color-black: black;
+    --color: white;
+}
+
+.container-table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* TABULEIRO */
+
+.table-3x3, .table-4x4, .table-5x5, .table-6x6 {
+    background-color: var(--background-color-black);
+    border: 2px var(--background-color-white) solid;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.table-3x3 {
+    width: 348px;
+}
+
+.table-4x4 {
+    width: 464px;
+}
+
+.table-5x5 {
+    width: 580px;
+}
+
+.table-6x6 {
+    width: 696px;
+}
+
+/* QUADRADOS */
+.quadrado, .quadrado0 {
+    width: 110px;
+    height: 110px;
+    background-color: var(--background-color-trans);
+    text-align: center;
+    font-size: 5rem;
+    border: 3px var(--background-color-white) solid;
+    color: var(--color);
+    cursor: pointer;
+}
+
+/* BOTÕES */
+
+.quadrado button, .quadrado0 button {
+    height: auto;
+    width: auto;
+    font-size: 8rem;
+    background-color: var(--background-color-trans);
+    border-color: transparent;
+}
+
+button {
+    height: 40px;
+    width: 90px;
+    border: 2px black solid;
+}
+
+.container-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.jogar {
+    height: 40px;
+    border-radius: 1rem;
+    padding: 25px;
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu {
+    width: 20rem;
+    height: 30rem;
+    border-radius: 1rem;
+    background-color: rgb(138, 65, 34);
+}
+
+.menu-botao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-botao button {
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.menu h2 {
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    margin: 30px;
+}
+
+.botoes {
+    margin-top: 1.5rem;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    .container-table, .container-menu {
+        height: auto;
+        padding: 20px;
+    }
+
+    .table-3x3, .table-4x4, .table-5x5, .table-6x6 {
+        width: 100%;
+        max-width: 90vw;
+    }
+
+    .quadrado, .quadrado0 {
+        width: 28vw;
+        height: 28vw;
+        font-size: 4vw;
+    }
+
+    .quadrado button, .quadrado0 button {
+        font-size: 5vw;
+    }
+
+    .menu {
+        width: 90vw;
+        height: auto;
+    }
+
+    .menu h2 {
+        font-size: 2rem;
+        margin: 20px;
+    }
+
+    .menu-botao button {
+        width: 80%;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+}
